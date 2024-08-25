@@ -1,0 +1,342 @@
+body {
+    font-family: 'PK Maehongson', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #00796b; /* สีเขียวเข้ม */
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+.header img {
+    height: 50px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo h1 {
+    color: white;
+    margin-left: 10px;
+}
+
+.header nav {
+    position: relative;
+}
+
+.header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: #00796b; /* สีเขียวเข้ม */
+}
+
+.header nav ul li {
+    position: relative;
+}
+
+.header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.header nav a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.header nav ul ul {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #004d40; /* สีเขียวเข้ม */
+    padding: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.header nav ul ul li {
+    width: 200px;
+}
+
+.header nav ul ul a {
+    margin: 0;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.header nav ul ul a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.header nav ul li:hover > ul {
+    max-height: 500px; /* You may need to adjust this value */
+    opacity: 1;
+}
+
+.content {
+    padding: 12px;
+}
+
+.visual-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recommendations {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.recommendations h3 {
+    color: #004d40; /* สีเขียวเข้ม */
+}
+
+.recommendations ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recommendations ul li {
+    margin-bottom: 10px;
+}
+
+.recommendations ul a {
+    color: #004d40; /* สีเขียวเข้ม */
+    text-decoration: none;
+}
+
+.recommendations ul a:hover {
+    text-decoration: underline;
+}
+
+/* ตั้งค่าให้เนื้อหาหลักอยู่ตรงกลาง */
+.main-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; /* กำหนดขนาดสูงสุดของเนื้อหา */
+    margin: 0 auto; /* ทำให้เนื้อหาตรงกลาง */
+}
+
+/* ปรับ padding สำหรับ .content และ .sidebar */
+.content {
+    flex: 3;
+    padding: 20px; /* ปรับ padding ภายใน */
+}
+
+.sidebar {
+    flex: 1;
+    max-width: 300px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ปรับ padding สำหรับ .news */
+.news {
+    margin-top: 20px;
+}
+
+.news h2 {
+    color: #00796b;
+    margin-top: 0;
+}
+
+.news-item {
+    margin-bottom: 15px;
+}
+
+.news-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.news-item h3 {
+    color: #00796b;
+    margin-top: 0;
+}
+
+.news-item p {
+    color: #333;
+}
+
+.news-item a {
+    font-weight: bold;
+    color: #00796b;
+    transition: color 0.3s ease;
+}
+
+.news-item a:hover {
+    color: #004d40;
+}
+
+/* ลด padding สำหรับ .content ภายใน .main-content */
+.content {
+    padding: 0 20px; /* ลด padding ซ้ายขวา */
+}
+
+/* ปรับปรุงให้เหมาะสมกับการแสดงผลบนมือถือ */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        padding: 10px;
+        max-width: 100%;
+    }
+}
+
+.footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #dddddd;
+}
+
+.footer-col {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-col h4 {
+    margin-top: 0;
+    color: #004d40; /* สีเขียวเข้ม */
+}
+
+.footer-col p,
+.footer-col a {
+    color: #004d40; /* สีเขียวเข้ม */
+}
+
+.footer-col a {
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+}
+
+.social-links a {
+    margin-right: 10px;
+    color: #004d40; /* สีเขียวเข้ม */
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .header nav ul {
+        flex-direction: column;
+    }
+
+    .header nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-col {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+.main-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    max-width: 300px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news {
+    margin-top: 20px;
+}
+
+.news h2 {
+    color: #00796b;
+    margin-top: 0;
+}
+
+.news-item {
+    margin-bottom: 15px;
+}
+
+.news-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.news-item h3 {
+    color: #00796b;
+    margin-top: 0;
+}
+
+.news-item p {
+    color: #333;
+}
+
+.news-item a {
+    font-weight: bold;
+    color: #00796b;
+    transition: color 0.3s ease;
+}
+
+.news-item a:hover {
+    color: #004d40;
+}
+
+.content {
+    flex: 3;
+}

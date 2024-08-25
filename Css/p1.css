@@ -1,0 +1,215 @@
+body {
+    font-family: 'PK Maehongson', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: #00796b;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    position: relative;
+    z-index: 10;
+}
+.header img {
+    height: 50px;
+}
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+.header .logo h1 {
+    color: white;
+    margin-left: 10px;
+}
+.header nav {
+    position: relative;
+}
+.header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.header nav ul li {
+    position: relative;
+}
+.header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+.header nav a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.header nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #00796b;
+    padding: 0;
+    z-index: 10;
+}
+.header nav ul ul li {
+    width: 200px;
+}
+.header nav ul ul a {
+    margin: 0;
+    padding: 10px;
+    white-space: nowrap;
+}
+.header nav ul ul a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.header nav ul li:hover > ul {
+    display: block;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden; /* ซ่อนภาพที่อยู่นอกขอบเขต */
+}
+
+.slides img {
+    width: 100%; /* ให้ภาพเต็มพื้นที่ของ slides */
+    flex-shrink: 0; /* ไม่ให้ภาพหดตัว */
+    border-radius: 15px;
+    pointer-events: none; /* ปิดการคลิกที่ภาพ */
+}
+
+.slider {
+    position: relative;
+    width: 100%; /* ให้ slider ขยายเต็มพื้นที่ */
+}
+
+.slider button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    z-index: 1;
+}
+.slider .left {
+    left: 10px;
+}
+.slider .right {
+    right: 10px;
+}
+.slider button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.indicator {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 100 px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    width: 100%;
+    pointer-events: none;
+}
+.indicator span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.indicator .active {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.header nav ul ul {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #00796b;
+    padding: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+.header nav ul ul li {
+    width: 200px;
+}
+.header nav ul ul a {
+    margin: 0;
+    padding: 10px;
+    white-space: nowrap;
+}
+.header nav ul ul a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.header nav ul li:hover > ul {
+    max-height: 500px;
+    opacity: 1;
+}
+.services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px 20px;
+}
+.services div {
+    flex: 1 1 100px;
+    max-width: 100px;
+    text-align: center;
+}
+.services div img {
+    width: 50px;
+    height: 50px;
+}
+.services {
+    text-align: center;
+    padding: 20px;
+}
+.services h2 {
+    text-align: left; /* ทำให้หัวข้อไปทางซ้ายสุด */
+    margin-left: 5px; /* เพิ่มระยะห่างจากขอบซ้าย */
+}
+.services div {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+.services a {
+    text-decoration: none;
+    color: black;
+}
+.services img {
+    display: block;
+    margin: 0 auto;
+}
+.services p {
+    margin-top: 5px;
+}

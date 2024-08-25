@@ -1,0 +1,47 @@
+/* การตั้งค่าของ card-container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* รองรับการจัดเรียงในหลายบรรทัด */
+    padding: 5px 0;
+    justify-content: space-between; /* ทำให้การ์ดกระจายออกเท่าๆ กัน */
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 5px; /* ระยะห่างระหว่างการ์ด */
+    margin-top: 1px;
+    padding: 12px;
+    width: 200px; /* กำหนดความกว้างของการ์ด */
+    display: flex;
+    flex-direction: row; /* การ์ดเรียงในแนวนอน */
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    max-width: 80px; /* กำหนดความกว้างของรูปภาพ */
+    margin-right: 5px;
+    border-radius: 8px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h4 {
+    margin: 0 0 10px 0;
+    font-size: 1em;
+}
+
+.card-content p {
+    font-size: 0.9em;
+    color: #666;
+}

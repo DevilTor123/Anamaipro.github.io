@@ -1,0 +1,103 @@
+body {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.header {
+    background-color: #3a3a3a;
+    color: white;
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+}
+
+nav ul li:hover > a {
+    background-color: #555;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    display: none;
+    flex-direction: column;
+}
+
+nav ul li:hover > ul {
+    display: flex;
+}
+
+nav ul ul li a {
+    padding: 10px 20px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.content h2 {
+    color: #333;
+    border-bottom: 2px solid #3a3a3a;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.content ul ul {
+    list-style-type: circle;
+}
+
+.content p, .content ul {
+    margin-bottom: 20px;
+}
+
+.content strong {
+    color: #3a3a3a;
+}

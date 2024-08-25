@@ -1,0 +1,41 @@
+.cards-container {
+    display: flex;
+    justify-content: center; /* จัดกลางแนวนอน */
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%; /* ปรับความกว้างสูงสุดตามต้องการ */
+    margin: 0 auto; /* จัดกลางสำหรับกรณีที่มีเนื้อหาเกิน */
+}
+
+.card {
+    width: 175px; /* กำหนดความกว้างคงที่ */
+    height: 300px; /* กำหนดความสูงคงที่ */
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    text-align: top;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    max-width: 100px;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+
+.card h3 {
+    margin: 10px 0 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
